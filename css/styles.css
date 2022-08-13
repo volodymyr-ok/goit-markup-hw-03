@@ -24,7 +24,9 @@
     letter-spacing: 0.03em;
 */
 
-/* .header {} */
+.header-container {
+    
+}
 
 body {
     background-color: #FFFFFF;

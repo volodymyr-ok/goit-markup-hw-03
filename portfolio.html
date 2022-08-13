@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфоліо</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
@@ -14,22 +18,24 @@
   <body>
     <!-- Шапка сайту -->
     <header>
-      <nav>
-        <!-- Логотип -->
-        <a href="./index.html" class="logo">
-          <span class="logo-web">Web</span><span class="logo-black">Studio</span>
-        </a>
-        <!-- Навігація -->
+      <div class="header-container">
+        <nav>
+          <!-- Логотип -->
+          <a href="./index.html" class="logo">
+            <span class="logo-web">Web</span><span class="logo-black">Studio</span>
+          </a>
+          <!-- Навігація -->
+          <ul class="nav-list">
+            <li><a href="./index.html" class="nav current">Студія</a></li>
+            <li><a href="./portfolio.html" class="nav">Портфоліо</a></li>
+            <li><a href="" class="nav">Контакти</a></li>
+          </ul>
+        </nav>
         <ul class="nav-list">
-          <li><a href="./index.html" class="nav">Студія</a></li>
-          <li><a href="./portfolio.html" class="nav current">Портфоліо</a></li>
-          <li><a href="" class="nav">Контакти</a></li>
+          <li><a href="mailto:info@devstudio.com" class="nav contact">info@devstudio.com</a></li>
+          <li><a href="tel:+380961111111" class="nav contact">+38 096 111 11 11</a></li>
         </ul>
-      </nav>
-      <ul class="nav-list">
-        <li><a href="mailto:info@devstudio.com" class="nav contact">info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111" class="nav contact">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </header>
     <!-- Головний контент сторінки -->
     <main>
