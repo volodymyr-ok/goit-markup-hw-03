@@ -14,25 +14,57 @@
     --footer-bg: #2F303A;
 }
 
-/* Шапка сайту */
-
-/* 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;    
-    text-align: center;
-    letter-spacing: 0.03em;
-*/
-
-.header-container {
-    
-}
+/* Загальні стилі для усіх сторінок */
 
 body {
     background-color: #FFFFFF;
     color: #212121;
     font-family: 'Roboto', sans-serif;
 }
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    /* padding: 0 15px; */
+
+    outline: 1px solid tomato;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    outline: 1px solid chartreuse;
+}
+
+    /* Власні відступи елементів */
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+    /* Скинуті стилі списків з усіх сторінок */
+
+.nav-list,
+.features,
+.doing-list,
+.team,
+.filter,
+.portfolio,
+.address-list {
+    list-style: none;
+}
+
+/* Шапка сайту */
+
+    /* Логотип */
 
 .logo {
     text-decoration: none;
@@ -51,9 +83,7 @@ body {
     color: var(--logo-black);
 }
 
-.nav-list {
-    list-style: none;
-}
+    /* Навігація */
 
 .nav-list a {
     font-weight: 500;
@@ -76,6 +106,8 @@ body {
     color: var(--blue-accent);
 }
 
+    /* Контакти хедера */
+    
 .nav.contact {
     color: var(--minor-color);
 }
@@ -85,9 +117,14 @@ a.contact:focus {
     color: var(--blue-accent);
 }
 
-    /* Головний контент сторінки студії */
+/* Головний контент сторінки студії */
 
-    
+    /* Герой */
+
+.hero {
+   text-align: center;
+}
+
 .heading {
     font-style: normal;
     font-weight: 900;
@@ -96,6 +133,9 @@ a.contact:focus {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .hero-btn {
@@ -106,7 +146,9 @@ a.contact:focus {
     line-height: 30px;
     text-align: center;
     letter-spacing: 0.06em;
+
     border: none;
+
     cursor: pointer;
 }
 
@@ -116,10 +158,10 @@ a.contact:focus {
     color: var(--hover-text-accent);
 }
 
-.features,
-.doing-list,
-.team {
-    list-style: none;
+    /* Особливості */
+    
+.features-heading {
+    margin: 0;
 }
 
 .feature-title {
@@ -129,6 +171,9 @@ a.contact:focus {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-color);
+
+    margin: 0;
+    padding: 0;
 }
 
 .feature-descr {
@@ -137,6 +182,16 @@ a.contact:focus {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--minor-color);
+
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+    /* Чим ми займаємося */
+
+.doing.section {
+    padding-top: 0;
 }
 
 .doing-title {
@@ -147,9 +202,17 @@ a.contact:focus {
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--main-color);
+
+    margin: 0;
 }
 
-.team-section {
+.doing-item {
+    padding: 0;
+}
+
+    /* Команда */
+
+.team {
     background-color: var(--bg-accent);
 }
 
@@ -188,13 +251,9 @@ a.contact:focus {
 
 
 
-    /* Головний контент сторінки портфоліо */
+/* Головний контент сторінки портфоліо */
 
     /* Фільтр */
-
-.filter {
-    list-style: none;
-}
 
 .filter .button {
     background-color: var(--bg-accent);
@@ -217,10 +276,6 @@ a.contact:focus {
 
     /* Портфоліо */
 
-.portfolio {
-    list-style: none;
-}
-
 .portfolio h2 {
     font-weight: 700;
     font-size: 18px;
@@ -230,7 +285,6 @@ a.contact:focus {
 
 .portfolio .type {
     color: var(--minor-color);
-    /* font-weight: 400; */
     font-size: 16px;
     line-height: 1.87;
     letter-spacing: 0.03em;
@@ -246,7 +300,8 @@ a.contact:focus {
     color: var(--logo-white);
 }
 
-.address a {
+.address-list a {
+    text-decoration: none;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -254,15 +309,7 @@ a.contact:focus {
     letter-spacing: 0.03em;
 }
 
-.contacts {
-    list-style: none;
-}
-
-.contacts a {
-    text-decoration: none;
-}
-
-.contacts .location {
+.contact.location {
     color: white;
 }
 
