@@ -174,9 +174,11 @@ a.contact:focus {
   line-height: 30px;
   text-align: center;
   letter-spacing: 0.06em;
+  padding: 10px 32px;
 
   border: none;
-
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -187,6 +189,15 @@ a.contact:focus {
 }
 
 /* Особливості */
+
+.features {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feature:not(:last-child) {
+  margin-right: 30px;
+}
 
 .features-heading {
   margin: 0;
@@ -222,6 +233,10 @@ a.contact:focus {
   padding-top: 0;
 }
 
+.doing .container {
+  flex-direction: column;
+}
+
 .doing-title {
   font-style: normal;
   font-weight: 700;
@@ -234,8 +249,21 @@ a.contact:focus {
   margin: 0;
 }
 
+.doing-list {
+  margin-top: 50px;
+  display: flex;
+}
+
 .doing-item {
   padding: 0;
+}
+
+.doing-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.doing-item img {
+  display: block;
 }
 
 /* Команда */
@@ -323,6 +351,17 @@ a.contact:focus {
 
 .footer {
   background-color: var(--secondary-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+footer .container {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+footer .logo {
+  margin-bottom: 20px;
 }
 
 .logo-white {
@@ -336,6 +375,12 @@ a.contact:focus {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  /* margin-top: 20px; */
+}
+
+.address-list > li:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .contact.location {
