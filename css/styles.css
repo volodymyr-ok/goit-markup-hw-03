@@ -304,6 +304,7 @@ a.contact:focus {
 
 .team-list {
   display: flex;
+  justify-content: space-between;
 }
 
 .team-member {
@@ -317,8 +318,9 @@ a.contact:focus {
   margin-right: 30px;
 }
 
-.member-photo {
-  margin-bottom: 30px;
+.team-container {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .member-name {
@@ -340,8 +342,6 @@ a.contact:focus {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--minor-color);
-
-  margin-bottom: 30px;
 }
 
 /*----------Головний контент портфоліо----------*/
