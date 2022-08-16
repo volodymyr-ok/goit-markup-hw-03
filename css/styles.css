@@ -1,5 +1,4 @@
 /* css змінні */
-
 :root {
   --logo-black: #000000;
   --logo-white: #ffffff;
@@ -20,12 +19,25 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/* Схований елемент */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding-right: 15px;
   padding-left: 15px;
-  /* padding: 0 15px; */
 
   display: flex;
   justify-content: space-between;
@@ -41,7 +53,6 @@ body {
 }
 
 /* Власні відступи елементів */
-
 h1,
 h2,
 h3,
@@ -52,7 +63,6 @@ ul {
 }
 
 /* Скинуті стилі списків з усіх сторінок */
-
 .nav-list,
 .features,
 .doing-list,
@@ -63,14 +73,15 @@ ul {
   list-style: none;
 }
 
-/* Шапка сайту */
+img {
+  display: block;
+}
+
+/*----------Шапка сайту----------*/
 
 /* .header {} */
 
 .header {
-  /* border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-bottom-color: #ececec; */
   border-bottom: 1px solid #ececec;
 }
 
@@ -84,7 +95,7 @@ header .container {
   align-items: center;
 }
 
-/* Логотип */
+/*__________Логотип */
 
 .logo {
   text-decoration: none;
@@ -105,7 +116,7 @@ header .container {
   color: var(--logo-black);
 }
 
-/* Навігація */
+/*__________Навігація*/
 
 .nav-list {
   display: flex;
@@ -136,7 +147,7 @@ ul > .nav-item:not(:last-child) {
   color: var(--blue-accent);
 }
 
-/* Контакти хедера */
+/*__________Контакти хедера*/
 
 .nav.contact {
   color: var(--minor-color);
@@ -147,9 +158,9 @@ a.contact:focus {
   color: var(--blue-accent);
 }
 
-/* Головний контент сторінки студії */
+/*----------Головний контент студії----------*/
 
-/* Герой */
+/*__________Герой*/
 
 .hero {
   background-color: var(--secondary-bg);
@@ -184,7 +195,6 @@ a.contact:focus {
   padding: 10px 32px;
 
   border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -193,9 +203,10 @@ a.contact:focus {
 .hero-btn:hover {
   background-color: var(--blue-accent);
   color: var(--hover-text-accent);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Особливості */
+/*__________Особливості*/
 
 .features {
   display: flex;
@@ -234,7 +245,7 @@ a.contact:focus {
   padding: 0;
 }
 
-/* Чим ми займаємося */
+/*__________Чим ми займаємося*/
 
 .doing.section {
   padding-top: 0;
@@ -269,11 +280,7 @@ a.contact:focus {
   margin-right: 30px;
 }
 
-.doing-item img {
-  display: block;
-}
-
-/* Команда */
+/*__________Команда*/
 
 .team {
   background-color: var(--bg-accent);
@@ -312,7 +319,6 @@ a.contact:focus {
 }
 
 .member-photo {
-  display: block;
   margin-bottom: 30px;
 }
 
@@ -339,9 +345,22 @@ a.contact:focus {
   margin-bottom: 30px;
 }
 
-/* Головний контент сторінки портфоліо */
+/*----------Головний контент портфоліо----------*/
 
-/* Фільтр */
+.portfolio.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/*__________Фільтр*/
+
+.filter {
+  display: flex;
+}
+
+.filter li:not(:last-child) {
+  margin-right: 8px;
+}
 
 .filter .button {
   background-color: var(--bg-accent);
@@ -353,19 +372,28 @@ a.contact:focus {
   text-align: center;
   letter-spacing: 0.03em;
 
-  /* display: inline-block; */
-
+  padding: 6px 22px;
   border: none;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .filter .button:hover,
 .filter .button:focus {
   background-color: var(--blue-accent);
   color: var(--hover-text-accent);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Портфоліо */
+/*__________Портфоліо*/
+
+.pf-list {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
 
 .pf-list h2 {
   font-weight: 700;
@@ -381,7 +409,17 @@ a.contact:focus {
   letter-spacing: 0.03em;
 }
 
-/* Підвал */
+.pf-item {
+  flex-basis: calc((100% - 68px) / 3);
+}
+
+.descr-container {
+  padding: 20px 24px;
+  border: 1px solid var(--portfolio-borders-color);
+  border-top: none;
+}
+
+/*----------Підвал----------*/
 
 .footer {
   background-color: var(--secondary-bg);
@@ -409,8 +447,6 @@ footer .logo {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-
-  /* margin-top: 20px; */
 }
 
 .address-list > li:not(:last-child) {
