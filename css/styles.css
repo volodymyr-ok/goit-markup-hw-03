@@ -79,10 +79,8 @@ ul {
 
 /*----------Шапка сайту----------*/
 
-/* .header {} */
-
 .header {
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--header-border);
 }
 
 header .container {
@@ -388,7 +386,7 @@ a.contact:focus {
 /*__________Портфоліо*/
 
 .pf-list {
-  margin-top: 34px;
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
