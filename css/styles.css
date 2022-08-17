@@ -40,11 +40,17 @@ body {
   padding-right: 15px;
   padding-left: 15px;
 
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+  outline: 1px solid tomato;
+}
+
+/* .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* outline: 1px solid tomato; */
-}
+} */
 
 .section {
   padding-top: 94px;
@@ -84,6 +90,12 @@ ul {
   border-bottom: 1px solid var(--header-border);
 }
 
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header .container {
   padding-top: 25px;
   padding-bottom: 25px;
@@ -103,7 +115,9 @@ header .container {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
 
+header .logo {
   margin-right: 93px;
 }
 
@@ -184,7 +198,6 @@ a.contact:focus {
 }
 
 .hero-btn {
-  background-color: var(--bg-accent);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -193,6 +206,10 @@ a.contact:focus {
   letter-spacing: 0.06em;
   padding: 10px 32px;
 
+  background-color: var(--blue-accent);
+  color: var(--hover-text-accent);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -200,9 +217,8 @@ a.contact:focus {
 
 .hero-btn:focus,
 .hero-btn:hover {
-  background-color: var(--blue-accent);
-  color: var(--hover-text-accent);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  background-color: var(--bg-accent);
+  color: inherit;
 }
 
 /*__________Особливості*/
@@ -354,6 +370,7 @@ a.contact:focus {
 
 .filter {
   display: flex;
+  justify-content: center;
 }
 
 .filter li:not(:last-child) {
@@ -426,8 +443,10 @@ a.contact:focus {
 }
 
 footer .container {
+  display: flex;
+
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 footer .logo {
